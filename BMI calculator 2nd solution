@@ -1,0 +1,34 @@
+#include<stdio.h>
+#include<conio.h>
+#include<math.h>
+
+void BMI_Calculation(){
+	float w, h, BMI;
+	printf ("Enter your weight in kilograms : ");
+	scanf ("%f", &w);
+	printf ("Enter your height in meters : ");
+	scanf ("%f", &h);
+	BMI = w/pow(h,2);
+	printf ("Your weight is %.2f and your height is %.2f so your BMI is %.2f", w, h, BMI);
+	if (BMI<18.5)
+	{
+		printf ("\nYou are underweight.");
+	}
+	else if (BMI<24.9)
+	{
+		printf ("\nYou are normal.");
+	}
+	else if (BMI<29.9)
+	{
+		printf ("\nYou are overweight.");
+	}
+	else
+	{
+		printf ("\nYou are obese.");
+	}
+}
+
+int main(){
+	BMI_Calculation();
+	getch();
+}
